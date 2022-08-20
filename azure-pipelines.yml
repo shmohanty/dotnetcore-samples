@@ -28,7 +28,7 @@ stages:
       inputs:
         buildContext: '$(Build.SourcesDirectory)/complexapp'
         command: build
-        dockerfile: '$(Build.SourcesDirectory)/complexapp/Dockerfile'
+        dockerfile: '$(Build.SourcesDirectory)/complexapp/dockerfile'
         tags: |
          $(tag)
     
