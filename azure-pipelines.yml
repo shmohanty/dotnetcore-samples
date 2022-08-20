@@ -24,15 +24,12 @@ stages:
     pool: 
      vmImage: ubuntu-latest
 
-    steps:
-     - script: 'pwd'
-   # - task: Docker@2
-     # displayName: Build an image
-      
-     # inputs:
-      #  buildContext: '$(Build.SourcesDirectory)/complexapp'
-       # command: build
-       # dockerfile: '**/dockerfile'
-      #  tags: |
-       #  $(tag)
     
+    steps:
+      - task: Docker@2
+        inputs:
+
+         command: 'build'
+         Dockerfile: '**/dockerfile'
+         buildContext: '$(Build.SourcesDirectory)'
+        
