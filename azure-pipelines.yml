@@ -25,9 +25,10 @@ stages:
      vmImage: ubuntu-latest
 
     steps:
-    - task: Docker@2
-      displayName: Build an image
-    - script: 'pwd'   
+     - script: 'pwd'
+   # - task: Docker@2
+     # displayName: Build an image
+      
      # inputs:
       #  buildContext: '$(Build.SourcesDirectory)/complexapp'
        # command: build
