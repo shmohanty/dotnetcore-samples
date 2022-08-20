@@ -23,8 +23,8 @@ stages:
     - task: Docker@2
       displayName: Build an image
       inputs:
-        buildContext: $$(Build.SourcesDirectory)/complexapp/complexapp
+        buildContext: $(Build.SourcesDirectory)/aspnetapp
         command: build
-        dockerfile: '$(Build.SourcesDirectory)/complexapp/complexapp/dockerfile'
+        dockerfile: '$(Build.SourcesDirectory)/aspnetapp/Dockerfile'
         tags: |
           $(tag)
