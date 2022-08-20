@@ -17,10 +17,12 @@ stages:
   jobs:
   - job: Build
     displayName: Build
-    pool:
-      name: Default
-      demands: 
-      - Agent.Name -equals selfhostedagent
+   # pool:
+    #  name: Default
+     # demands: 
+     # - Agent.Name -equals selfhostedagent
+    pool: 
+     vmImage: ubuntu-latest
 
     steps:
     - task: Docker@2
