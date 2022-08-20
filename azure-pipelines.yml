@@ -27,10 +27,11 @@ stages:
     steps:
     - task: Docker@2
       displayName: Build an image
-      inputs:
-       # buildContext: '$(Build.SourcesDirectory)/complexapp'
-        command: build
-        dockerfile: '**/dockerfile'
-        tags: |
-         $(tag)
+    - script: 'pwd'   
+     # inputs:
+      #  buildContext: '$(Build.SourcesDirectory)/complexapp'
+       # command: build
+       # dockerfile: '**/dockerfile'
+      #  tags: |
+       #  $(tag)
     
