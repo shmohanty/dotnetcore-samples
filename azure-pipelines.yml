@@ -30,6 +30,6 @@ stages:
         inputs:
           buildContext: '$(Build.SourcesDirectory)/dotnetapp'
           command: 'build'
-          Dockerfile: '**/dockerfile'
+          Dockerfile: '**/Dockerfile'
           #buildContext: '$(Build.SourcesDirectory)'
         
