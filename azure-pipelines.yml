@@ -28,8 +28,8 @@ stages:
     steps:
       - task: Docker@2
         inputs:
-          buildContext: '$(Build.SourcesDirectory)/dotnetapp'
+          buildContext: '$(Build.SourcesDirectory)/complexapp'
           command: 'build'
-          Dockerfile: '**/Dockerfile'
+          Dockerfile: '**/dockerfile'
           #buildContext: '$(Build.SourcesDirectory)'
         
