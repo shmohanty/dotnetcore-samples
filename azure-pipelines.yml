@@ -28,8 +28,8 @@ stages:
     steps:
       - task: Docker@2
         inputs:
-
-         command: 'build'
-         Dockerfile: '**/dockerfile'
-         buildContext: '$(Build.SourcesDirectory)'
+          buildContext: '$(Build.SourcesDirectory)/aspnetapp'
+          command: 'build'
+          Dockerfile: '**/dockerfile'
+          #buildContext: '$(Build.SourcesDirectory)'
         
