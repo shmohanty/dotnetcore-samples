@@ -9,6 +9,7 @@ RUN dotnet restore
 
 
 WORKDIR /source/dotnetapp
+COPY *.csproj ./
 
 # TODO: publish app and libraries to /app path
 RUN dotnet publish -c Release -o out
