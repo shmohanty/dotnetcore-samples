@@ -31,5 +31,5 @@ stages:
          # buildContext: '$(Build.SourcesDirectory)/complexapp'
           command: 'build'
           Dockerfile: '**/dockerfile'
-          buildContext: '$(Build.SourcesDirectory)'
+          #buildContext: '$(Build.SourcesDirectory)'
         
