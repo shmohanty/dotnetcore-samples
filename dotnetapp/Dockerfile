@@ -2,7 +2,7 @@ FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /source
 
 # TODO: Copy source code to workdir 
-COPY COPY *.csproj ./
+COPY *.csproj ./
 
 # TODO: Restore Dot Net Layers
 RUN dotnet restore
