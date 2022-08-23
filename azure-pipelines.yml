@@ -26,8 +26,12 @@ stages:
 
     
     steps:
-      - task: Docker@2
-        inputs:
+     - task: Bash@3
+       inputs:
+        targetType: 'inline'
+        script: 'pwd'
+     - task: Docker@2
+       inputs:
           buildContext: '$(Build.SourcesDirectory)/complexapp'
           command: 'build'
           Dockerfile: '**/dockerfile'
