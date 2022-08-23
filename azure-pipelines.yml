@@ -32,7 +32,8 @@ stages:
         script: | 
          pwd
          ls -l
-         env | grep DOCKER*
+         env 
+         ls -l $(Build.SourcesDirectory)/complexapp
 
      - task: Docker@2
        inputs:
