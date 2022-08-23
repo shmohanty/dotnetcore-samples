@@ -29,7 +29,11 @@ stages:
      - task: Bash@3
        inputs:
         targetType: 'inline'
-        script: 'pwd'
+        script: | 
+         pwd
+         ls -l
+         env | grep DOCKER*
+
      - task: Docker@2
        inputs:
           buildContext: '$(Build.SourcesDirectory)/complexapp'
